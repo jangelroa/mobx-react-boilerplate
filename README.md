@@ -11,7 +11,7 @@ Supports ES6 and JSX compilation through babel.
 ```
 npm install
 npm start
-open http://localhost:3000
+open http://localhost:3700
 ```
 
 
