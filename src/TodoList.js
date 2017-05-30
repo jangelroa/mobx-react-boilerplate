@@ -22,6 +22,7 @@ export default class TodoList extends React.Component {
     const {
       showAll,
       clearComplete,
+      showAllTodos,
       filter,
       filteredTodos,
       todos
@@ -48,6 +49,7 @@ export default class TodoList extends React.Component {
         />
         <ul>{todoList}</ul>
         <a href="#" onClick={clearComplete}>Clear Complete</a>
+        <a href="#" onClick={showAllTodos}>Show All Todos</a>
       </div>
     );
   }

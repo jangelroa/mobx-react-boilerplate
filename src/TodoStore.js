@@ -14,6 +14,7 @@ class Todo {
 
 class TodoStore {
   @observable todos = [];
+  allTodos = [];
   @observable filter = "";
   @computed get filteredTodos() {
     var matchesFilter = new RegExp(this.filter, "i");
@@ -23,12 +24,19 @@ class TodoStore {
   }
 
   createTodo(value) {
-    this.todos.push(new Todo(value));
+    const todo = new Todo(value);
+    this.todos.push(todo);
+    this.allTodos.push(todo);
   }
 
   clearComplete = () => {
     const incompleteTodos = this.todos.filter(todo => !todo.complete);
     this.todos.replace(incompleteTodos);
+  };
+
+  showAllTodos = () => {
+    debugger;
+    this.todos.replace(this.allTodos);
   };
 }
 
