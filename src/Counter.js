@@ -13,15 +13,16 @@ import { observable } from "mobx";
         <button onClick={this.handleDec}>-</button>
       </div>
     );
-    handleInc = () => {
-      console.log("INC");
-      this.count++;
-    };
-    handleDec = () => {
-      console.log("DEC");
-      this.count--;
-    };
   }
+
+  handleInc = () => {
+    console.log("INC");
+    this.count++;
+  };
+  handleDec = () => {
+    console.log("DEC");
+    this.count--;
+  };
 
   onReset = () => {
     this.props.appState.resetTimer();
