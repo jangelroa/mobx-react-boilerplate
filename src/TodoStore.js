@@ -35,7 +35,6 @@ class TodoStore {
   };
 
   showAllTodos = () => {
-    debugger;
     this.todos.replace(this.allTodos);
   };
 }
