@@ -1,18 +1,18 @@
 import React from "react";
 import { render } from "react-dom";
 import { AppContainer } from "react-hot-loader";
-import App from "./App";
+import AppWrapper, { t } from "./AppWrapper";
 
 render(
   <AppContainer>
-    <App />
+    <AppWrapper />
   </AppContainer>,
   document.getElementById("root")
 );
 
 if (module.hot) {
-  module.hot.accept("./App", () => {
-    const NextApp = require("./App").default;
+  module.hot.accept("./AppWrapper", () => {
+    const NextApp = require("./AppWrapper").default;
 
     render(
       <AppContainer>
