@@ -22,6 +22,7 @@ appState.decrement = function() {
         Counter: {appState.count} <br />
         <button onClick={this.handleInc}>+</button>
         <button onClick={this.handleDec}>-</button>
+        <DevTools />
       </div>
     );
   }
