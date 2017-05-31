@@ -19,7 +19,7 @@ appState.decrement = function() {
   render() {
     return (
       <div>
-        Counter: {this.props.store.count} <br />
+        Counter: {appState.count} <br />
         <button onClick={this.handleInc}>+</button>
         <button onClick={this.handleDec}>-</button>
       </div>
@@ -27,14 +27,10 @@ appState.decrement = function() {
   }
 
   handleInc = () => {
-    this.props.store.increment();
+    appState.increment();
   };
   handleDec = () => {
-    this.props.store.decrement();
-  };
-
-  onReset = () => {
-    this.props.appState.resetTimer();
+    appState.decrement();
   };
 }
 
@@ -42,7 +38,7 @@ appState.decrement = function() {
   render() {
     return (
       <div>
-        <Counter store={appState} />
+        <Counter />
       </div>
     );
   }
